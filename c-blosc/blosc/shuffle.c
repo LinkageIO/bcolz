@@ -166,7 +166,7 @@ __cpuidex(int32_t cpuInfo[4], int32_t function_id, int32_t subfunction_id) {
 /* Reads the content of an extended control register.
    https://software.intel.com/en-us/articles/how-to-detect-new-instruction-support-in-the-4th-generation-intel-core-processor-family
 */
-static inline uint64_t
+static inline long long
 _xgetbv(uint32_t xcr) {
   uint32_t eax, edx;
   __asm__ __volatile__ (
